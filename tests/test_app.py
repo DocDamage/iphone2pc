@@ -1,11 +1,17 @@
 from datetime import datetime
 from pathlib import Path
 
+import pytest
 from fastapi.testclient import TestClient
 
 import app as idrive
-import iphone_mount
-from winfspy import NTStatusMediaWriteProtected
+try:
+    import iphone_mount
+    from winfspy import NTStatusMediaWriteProtected
+except (ImportError, OSError, RuntimeError):
+    iphone_mount = None
+    NTStatusMediaWriteProtected = RuntimeError
+mount_test = pytest.mark.skipif(iphone_mount is None, reason="WinFsp is unavailable")
 
 
 class FakeAFC:
@@ -230,6 +236,7 @@ def test_export_preflight_uses_only_selected_track_sizes(tmp_path, monkeypatch):
     assert body["can_export"] is True
 
 
+@mount_test
 def test_mountpoint_and_windows_path_validation():
     assert iphone_mount.validate_mountpoint("i") == "I:"
     assert iphone_mount.windows_to_afc_path(r"\Downloads\demo.wav") == "/Downloads/demo.wav"
@@ -242,6 +249,7 @@ def test_mountpoint_and_windows_path_validation():
         raise AssertionError("The system drive must never be accepted as a mount point")
 
 
+@mount_test
 def test_mount_reads_remote_bytes_with_afc_seek(tmp_path):
     fake = FakeBridge({"/Downloads/demo.wav": b"0123456789"})
     operations = iphone_mount.IPhoneFileSystemOperations(fake, str(tmp_path))
@@ -251,6 +259,7 @@ def test_mount_reads_remote_bytes_with_afc_seek(tmp_path):
     operations.close(context)
 
 
+@mount_test
 def test_mount_exposes_decoded_virtual_music_library(tmp_path):
     fake = FakeBridge({"/iTunes_Control/Music/F00/ABCD.wav": b"decoded beat"})
     operations = iphone_mount.IPhoneFileSystemOperations(
@@ -277,6 +286,7 @@ def test_mount_exposes_decoded_virtual_music_library(tmp_path):
     operations.close(context)
 
 
+@mount_test
 def test_mount_rejects_creates_outside_portable_files(tmp_path):
     fake = FakeBridge({"/Downloads/placeholder.txt": b"x"})
     operations = iphone_mount.IPhoneFileSystemOperations(fake, str(tmp_path))
