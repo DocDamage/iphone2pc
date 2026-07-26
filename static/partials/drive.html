@@ -1,0 +1,90 @@
+        <!-- TAB 2: PORTABLE DRIVE EXPLORER -->
+        <div id="driveTab" class="tab-content">
+            <div class="page-heading"><div><span class="eyebrow">IPHONE FILE EXPLORER</span><h2>Browse visible iPhone storage</h2><p>Download from Apple-exposed folders, or write safely inside the dedicated Portable Files area.</p></div><span id="driveModeBadge" class="page-mode"><i class="fa-solid fa-eye"></i> Read-only browsing</span></div>
+            <div class="card">
+                <div class="card-header">
+                    <div class="card-title">
+                        <i class="fa-solid fa-folder-open" style="color: var(--accent-teal);"></i>
+                        Files and folders
+                    </div>
+                    <div style="display: flex; gap: 10px; align-items: center; flex-wrap: wrap;">
+                        <button id="btnCreateFolder" class="btn btn-secondary btn-sm" onclick="promptCreateFolder()" disabled>
+                            <i class="fa-solid fa-folder-plus"></i> New Folder
+                        </button>
+                        <input type="file" id="uploadFileInput" style="display: none;" onchange="handleUpload(this)" multiple>
+                        <button id="btnUploadFiles" class="btn btn-secondary btn-sm" onclick="document.getElementById('uploadFileInput').click()" disabled>
+                            <i class="fa-solid fa-cloud-arrow-up"></i> Upload
+                        </button>
+                        <button class="btn btn-secondary btn-sm" onclick="setupPortableFolder()">
+                            <i class="fa-solid fa-shield"></i> Set up writable folder
+                        </button>
+                        <select id="mountDriveSelect" class="input-field" style="width: 72px; padding: 7px 8px;">
+                            <option value="I:">I:</option>
+                            <option value="J:">J:</option>
+                            <option value="K:">K:</option>
+                            <option value="L:">L:</option>
+                        </select>
+                        <button id="btnMountDrive" class="btn btn-secondary btn-sm" onclick="toggleDriveMount()">
+                            <i class="fa-brands fa-windows"></i> Mount in Explorer
+                        </button>
+                        <button id="btnBatchDownload" class="btn btn-success btn-sm" onclick="batchDownloadSelected()" disabled>
+                            <i class="fa-solid fa-file-zipper"></i> Download Selected
+                        </button>
+                        <button class="btn btn-secondary btn-sm" onclick="loadDrivePath(currentDrivePath)">
+                            <i class="fa-solid fa-rotate"></i> Refresh
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Breadcrumb Path Bar -->
+                <div class="breadcrumb-bar">
+                    <span class="bc-label"><i class="fa-solid fa-mobile-screen"></i></span>
+                    <div id="breadcrumbNav" style="display: flex; align-items: center; gap: 4px; flex-wrap: wrap;">
+                        <span class="breadcrumb-segment" onclick="loadDrivePath('/')">/</span>
+                    </div>
+                    <button id="goUpBtn" class="go-up-btn" onclick="goUpDirectory()" style="margin-left: auto; display: none;">
+                        <i class="fa-solid fa-arrow-up"></i> Up
+                    </button>
+                </div>
+
+                <!-- Drop Zone for drag-and-drop upload -->
+                <div id="dropZone" class="drop-zone">
+                    <i class="fa-solid fa-cloud-arrow-up" style="font-size: 32px; margin-bottom: 12px;"></i><br>
+                    <strong>Drop files into Portable Files</strong><br>
+                    <span style="font-size: 13px;">Writes are blocked everywhere else on the iPhone</span>
+                </div>
+
+                <!-- Drive Search Bar -->
+                <div class="toolbar-row">
+                    <div style="position: relative; flex: 1;">
+                        <i class="fa-solid fa-search" style="position: absolute; left: 14px; top: 12px; color: var(--text-muted);"></i>
+                        <input type="text" id="driveSearchInput" class="input-field" style="padding-left: 40px;" placeholder="Search files on iPhone..." onkeydown="if(event.key==='Enter')searchDriveFiles()">
+                    </div>
+                    <button class="btn btn-secondary btn-sm" onclick="searchDriveFiles()">
+                        <i class="fa-solid fa-search"></i> Search
+                    </button>
+                </div>
+
+                <!-- Explorer Layout -->
+                <div class="drive-grid">
+                    <div class="drive-tree">
+                        <div class="drive-tree-label">Quick Shortcuts</div>
+                        <div class="tree-node active" onclick="loadDrivePath('/')"><i class="fa-solid fa-hard-drive"></i> Root Storage</div>
+                        <div class="tree-node" onclick="loadDrivePath('/Downloads/iDrivePulse Portable Files')"><i class="fa-solid fa-shield"></i> Portable Files (Writable)</div>
+                        <div class="tree-node" onclick="loadDrivePath('/iTunes_Control/Music')"><i class="fa-solid fa-music"></i> iTunes Music</div>
+                        <div class="tree-node" onclick="loadDrivePath('/DCIM')"><i class="fa-solid fa-camera"></i> Photos / DCIM</div>
+                        <div class="tree-node" onclick="loadDrivePath('/Downloads')"><i class="fa-solid fa-download"></i> Downloads</div>
+                        <div class="tree-node" onclick="loadDrivePath('/Recordings')"><i class="fa-solid fa-microphone"></i> Recordings</div>
+                        <div class="tree-node" onclick="loadDrivePath('/Documents')"><i class="fa-solid fa-folder"></i> Documents</div>
+                        <div class="tree-node" onclick="loadDrivePath('/Books')"><i class="fa-solid fa-book"></i> Books</div>
+                    </div>
+
+                    <div id="fileExplorerList" class="explorer-file-list">
+                        <div style="text-align: center; color: var(--text-muted); padding: 50px;">
+                            <i class="fa-solid fa-folder-open" style="font-size: 32px; opacity: 0.4; margin-bottom: 12px;"></i><br>
+                            Select a directory to browse iPhone files...
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>

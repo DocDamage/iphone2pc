@@ -1,0 +1,47 @@
+        <!-- TAB 4: ACCESS AND SAFETY -->
+        <div id="wifiTab" class="tab-content">
+            <div class="page-heading"><div><span class="eyebrow">TRANSPARENT SYSTEM ACCESS</span><h2>Device health, drivers & safety</h2><p>Understand exactly what the app can see, inspect the Windows USB stack, and diagnose transfer quality.</p></div><span class="page-mode"><i class="fa-solid fa-lock"></i> Loopback-only control</span></div>
+            <div class="card">
+                <div class="card-header">
+                    <div class="card-title">
+                        <i class="fa-solid fa-shield-halved" style="color: var(--accent-amber);"></i>
+                        Access boundaries
+                    </div>
+                </div>
+                <div style="line-height: 1.6; color: var(--text-secondary);">
+                    <p style="margin-bottom: 16px;">
+                        iDrivePulse uses Apple's AFC service over USB. It can browse the media storage Apple exposes, including synced music and DCIM, but iOS does not expose every app's private files as a normal hard drive.
+                    </p>
+
+                    <div style="background: var(--bg-input); padding: 24px; border-radius: var(--radius-md); border: 1px solid var(--border-color); display: flex; flex-direction: column; gap: 16px;">
+                        <div style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 8px;">
+                            <span style="font-weight: 600; color: var(--text-primary);">Web app access:</span>
+                            <span id="wifiIpDisplay" style="font-family: monospace; font-size: 15px; color: var(--accent-teal); font-weight: 700; background: rgba(16,185,129,0.1); padding: 6px 14px; border-radius: var(--radius-sm);">This PC only · 127.0.0.1:8765</span>
+                        </div>
+                        <p style="font-size: 13px; color: var(--text-muted);">
+                            <i class="fa-solid fa-lock" style="color: var(--primary);"></i>
+                            The server is intentionally not exposed to Wi-Fi. Other devices and unrelated websites cannot control transfers.
+                        </p>
+                        <p style="font-size: 13px; color: var(--text-muted);">
+                            <i class="fa-solid fa-circle-info" style="color: var(--primary);"></i>
+                            If a beat exists only inside a sandboxed app and does not appear here, export it from that app to Files or use its File Sharing support first. This tool does not bypass iOS encryption or app permissions.
+                        </p>
+                    </div>
+
+                    <div style="background: var(--bg-input); padding: 24px; border-radius: var(--radius-md); border: 1px solid var(--border-color); margin-top: 16px;">
+                        <div style="display: flex; align-items: center; justify-content: space-between; gap: 12px; flex-wrap: wrap; margin-bottom: 12px;">
+                            <h3 style="color: var(--text-primary);"><i class="fa-solid fa-microchip" style="color: var(--primary);"></i> Hardware & Driver Console</h3>
+                            <button class="btn btn-secondary btn-sm" onclick="loadHardwareDiagnostics()"><i class="fa-solid fa-stethoscope"></i> Inspect</button>
+                        </div>
+                        <div id="hardwareDiagnostics" style="font-size: 13px; color: var(--text-muted);">Open this tab or click Inspect to read the current Windows PnP, Apple mux, AFC, and WinFsp state.</div>
+                        <div class="button-stack horizontal" style="margin-top:16px;">
+                            <button class="btn btn-secondary btn-sm" onclick="loadKernelDiagnostics()"><i class="fa-solid fa-microchip"></i> Kernel / Registry</button>
+                            <button class="btn btn-secondary btn-sm" onclick="runCableBenchmark()"><i class="fa-solid fa-gauge-high"></i> Cable Test</button>
+                            <button id="usbTraceButton" class="btn btn-secondary btn-sm" onclick="toggleUsbTrace()"><i class="fa-solid fa-record-vinyl"></i> Start USB Trace</button>
+                            <button class="btn btn-secondary btn-sm" onclick="loadConnectionTimeline()"><i class="fa-solid fa-timeline"></i> Timeline</button>
+                        </div>
+                        <div id="deepDiagnostics" class="feature-results" style="margin-top:12px;">Deep diagnostic results appear here. ETW trace recording may require running as Administrator.</div>
+                    </div>
+                </div>
+            </div>
+        </div>

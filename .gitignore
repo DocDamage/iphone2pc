@@ -1,0 +1,42 @@
+# Python
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.ruff_cache/
+.mypy_cache/
+.coverage
+htmlcov/
+.venv/
+venv/
+
+# Private runtime state and recovered data
+data/
+temp_cache/
+artifacts/
+*.sqlite3
+*.sqlite3-*
+*.etl
+*.part
+*.log
+*.pem
+*.dpapi
+.env
+.env.*
+
+# Editors and operating systems
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
+
+# Generated iOS/Xcode output
+ios-companion/*.xcodeproj/
+ios-companion/DerivedData/
+ios-companion/build/
+*.xcuserstate
+xcuserdata/
+
+# Local recovery destinations
+Recovered Beats/
+Recovered_Beats/
+Recovery Vaults/
