@@ -2,6 +2,7 @@ pymobiledevice3>=4.0.0
 mutagen>=1.47.0
 fastapi>=0.100.0
 uvicorn>=0.22.0
+python-multipart>=0.0.32
 requests>=2.31.0
 pywin32>=306
 sse-starlette>=1.6.0
