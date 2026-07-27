@@ -1,8 +1,46 @@
+<p align="center">
+  <img src="branding/PocketDock_Branding_Pack/01_primary_logos/pocketdock_primary_horizontal.png" alt="PocketDock" width="600">
+</p>
+
 # PocketDock 4.0
 
 PocketDock is a private file bridge for iPhone and Windows. It moves original-quality files,
 photos, videos, folders, clipboard text, music projects, and encrypted deliveries directly to
 your PC, with local-first defaults and no PocketDock account.
+
+## PocketDock in action
+
+These screens use branded, synthetic demo content. No real device identifiers, personal files,
+local paths, or active pairing credentials are shown.
+
+### Home and automatic iPhone detection
+
+[![PocketDock Home showing an automatically detected iPhone, Camera Roll readiness, encrypted transfer status, and the media player](docs/screenshots/pocketdock-home.png)](docs/screenshots/pocketdock-home.png)
+
+PocketDock surfaces the connected iPhone and DCIM readiness at launch, while the persistent player
+keeps preview controls available across the app.
+
+### Music library and playlist recovery
+
+[![PocketDock Music Library showing the DocRoshi Beats recovery summary and the feature-rich audio player](docs/screenshots/pocketdock-music-library.png)](docs/screenshots/pocketdock-music-library.png)
+
+The unified library automatically indexes local Windows audio and shows PocketDock-received
+originals, cached phone-file inventory, and the complete cached playlist manifest alongside it.
+
+<table>
+  <tr>
+    <td width="50%">
+      <a href="docs/screenshots/pocketdock-media-gallery.png"><img src="docs/screenshots/pocketdock-media-gallery.png" alt="PocketDock branded media gallery with video, GIF, audio waveform, image previews, and document cards"></a>
+    </td>
+    <td width="50%">
+      <a href="docs/screenshots/pocketdock-usb-dcim.png"><img src="docs/screenshots/pocketdock-usb-dcim.png" alt="PocketDock USB Files screen showing iPhone recognition and green DCIM readiness"></a>
+    </td>
+  </tr>
+  <tr>
+    <td align="center"><strong>Media gallery</strong><br>Video, animated GIF, audio, and image previews plus document cards.</td>
+    <td align="center"><strong>USB Files & Camera Roll</strong><br>Camera Roll import plus Apple Devices handoff for PocketDock-staged files.</td>
+  </tr>
+</table>
 
 ## What is included
 
