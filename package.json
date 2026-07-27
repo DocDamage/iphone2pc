@@ -1,0 +1,124 @@
+{
+  "name": "pocketdock",
+  "version": "4.0.1",
+  "description": "An encrypted, verified file and clipboard bridge between iPhone and Windows.",
+  "author": "DocDamage",
+  "license": "UNLICENSED",
+  "type": "module",
+  "main": "dist-electron/main.cjs",
+  "workspaces": [
+    "relay"
+  ],
+  "engines": {
+    "node": ">=22"
+  },
+  "scripts": {
+    "dev": "concurrently -k \"vite --host 127.0.0.1\" \"npm:dev:electron\"",
+    "dev:electron": "wait-on http://127.0.0.1:5173 && npm run build:electron && cross-env VITE_DEV_SERVER_URL=http://127.0.0.1:5173 electron .",
+    "build": "npm run typecheck && npm run build:mobile && npm run build:renderer && npm run build:electron",
+    "build:mobile": "node scripts/build-mobile-crypto.mjs",
+    "build:renderer": "vite build",
+    "build:electron": "node scripts/build-electron.mjs",
+    "build:icons": "node scripts/generate-icons.mjs",
+    "brand:win-exe": "node scripts/brand-windows-executable.mjs",
+    "typecheck": "tsc --noEmit",
+    "test": "vitest run",
+    "verify": "npm run typecheck && npm test && npm run build",
+    "test:watch": "vitest",
+    "verify:ios": "node scripts/verify-ios-project.mjs",
+    "verify:hardware": "node scripts/verify-hardware-readiness.mjs",
+    "verify:relay": "npm --prefix relay run typecheck",
+    "verify:build-tools": "node scripts/verify-build-tool-security.mjs && npm audit",
+    "package:win": "npm run build && electron-builder --win nsis",
+    "package:portable": "npm run build && electron-builder --win portable",
+    "package:complete": "node scripts/package-complete.mjs"
+  },
+  "devDependencies": {
+    "@noble/ciphers": "^2.2.0",
+    "@noble/hashes": "2.2.0",
+    "@types/express": "5.0.6",
+    "@types/node": "26.1.1",
+    "@types/qrcode": "1.5.6",
+    "@types/react": "19.2.17",
+    "@types/react-dom": "19.2.3",
+    "@vitejs/plugin-react": "6.0.4",
+    "archiver": "^8.0.0",
+    "brace-expansion": "file:vendor/brace-expansion-compat",
+    "bonjour-service": "1.4.3",
+    "concurrently": "^9.2.1",
+    "cross-env": "^10.1.0",
+    "electron": "43.2.0",
+    "electron-builder": "26.15.3",
+    "electron-updater": "6.8.9",
+    "esbuild": "0.28.1",
+    "express": "5.2.1",
+    "lucide-react": "1.27.0",
+    "music-metadata": "^11.14.0",
+    "png-to-ico": "3.0.2",
+    "qrcode": "1.5.4",
+    "react": "19.2.8",
+    "react-dom": "19.2.8",
+    "typescript": "7.0.2",
+    "vite": "8.1.5",
+    "vitest": "4.1.10",
+    "wait-on": "^9.0.3",
+    "zod": "4.4.3"
+  },
+  "build": {
+    "appId": "com.docdamage.pocketdock",
+    "productName": "PocketDock",
+    "asar": true,
+    "electronLanguages": [
+      "en-US",
+      "es"
+    ],
+    "directories": {
+      "output": "release"
+    },
+    "files": [
+      "dist/**/*",
+      "dist-electron/**/*",
+      "build/icon.png",
+      "package.json"
+    ],
+    "extraResources": [
+      {
+        "from": "public/mobile",
+        "to": "mobile"
+      },
+      {
+        "from": "scripts/windows",
+        "to": "windows-scripts"
+      }
+    ],
+    "win": {
+      "icon": "build/icon.ico",
+      "target": [
+        {
+          "target": "nsis",
+          "arch": [
+            "x64"
+          ]
+        }
+      ]
+    },
+    "nsis": {
+      "artifactName": "PocketDock-${version}-${arch}-Setup.${ext}",
+      "oneClick": false,
+      "allowToChangeInstallationDirectory": true,
+      "createDesktopShortcut": true,
+      "createStartMenuShortcut": true,
+      "shortcutName": "PocketDock",
+      "include": "build/installer.nsh"
+    },
+    "portable": {
+      "artifactName": "PocketDock-${version}-${arch}-Portable.${ext}"
+    }
+  },
+  "dependencies": {
+    "sharp": "^0.35.3"
+  },
+  "overrides": {
+    "brace-expansion": "$brace-expansion"
+  }
+}

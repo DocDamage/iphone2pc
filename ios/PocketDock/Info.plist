@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+  <key>CFBundleDisplayName</key>
+  <string>PocketDock</string>
+  <key>CFBundleIdentifier</key>
+  <string>$(PRODUCT_BUNDLE_IDENTIFIER)</string>
+  <key>CFBundleInfoDictionaryVersion</key>
+  <string>6.0</string>
+  <key>CFBundleName</key>
+  <string>$(PRODUCT_NAME)</string>
+  <key>CFBundlePackageType</key>
+  <string>APPL</string>
+  <key>CFBundleShortVersionString</key>
+  <string>$(MARKETING_VERSION)</string>
+  <key>CFBundleVersion</key>
+  <string>$(CURRENT_PROJECT_VERSION)</string>
+  <key>PocketDockKeychainAccessGroup</key>
+  <string>$(AppIdentifierPrefix)com.docdamage.pocketdock.shared</string>
+  <key>LSRequiresIPhoneOS</key>
+  <true/>
+  <key>UIFileSharingEnabled</key>
+  <true/>
+  <key>LSSupportsOpeningDocumentsInPlace</key>
+  <true/>
+  <key>NSCameraUsageDescription</key>
+  <string>PocketDock scans the private QR code shown on your PC.</string>
+  <key>NSContactsUsageDescription</key>
+  <string>PocketDock can export a private vCard backup of your contacts to your paired PC when you ask.</string>
+  <key>NSAppleMusicUsageDescription</key>
+  <string>PocketDock uses Music access to recover locally stored, unprotected songs you own into its Files folder, send them privately to your paired PC, and build your searchable library inventory.</string>
+  <key>NSFaceIDUsageDescription</key>
+  <string>PocketDock can require Face ID before showing paired computers and shared files.</string>
+  <key>NSLocalNetworkUsageDescription</key>
+  <string>PocketDock transfers encrypted files directly to computers on your local network.</string>
+  <key>NSPhotoLibraryUsageDescription</key>
+  <string>PocketDock can privately back up selected photos and videos to your paired PC.</string>
+  <key>NSPhotoLibraryAddUsageDescription</key>
+  <string>PocketDock can save files you receive from your PC to your photo library when you ask.</string>
+  <key>CFBundleURLTypes</key>
+  <array>
+    <dict>
+      <key>CFBundleURLName</key>
+      <string>com.docdamage.pocketdock.pair</string>
+      <key>CFBundleURLSchemes</key>
+      <array>
+        <string>pocketdock</string>
+      </array>
+    </dict>
+  </array>
+  <key>NSAppTransportSecurity</key>
+  <dict>
+    <key>NSAllowsLocalNetworking</key>
+    <true/>
+  </dict>
+  <key>NSBonjourServices</key>
+  <array>
+    <string>_pocketdock._tcp</string>
+  </array>
+  <key>UIApplicationSceneManifest</key>
+  <dict>
+    <key>UIApplicationSupportsMultipleScenes</key>
+    <true/>
+  </dict>
+  <key>NSSupportsLiveActivities</key>
+  <true/>
+  <key>NSSupportsLiveActivitiesFrequentUpdates</key>
+  <true/>
+  <key>UILaunchScreen</key>
+  <dict>
+    <key>UIColorName</key>
+    <string>LaunchBackground</string>
+  </dict>
+  <key>UIBackgroundModes</key>
+  <array>
+    <string>fetch</string>
+    <string>processing</string>
+  </array>
+  <key>BGTaskSchedulerPermittedIdentifiers</key>
+  <array>
+    <string>com.docdamage.pocketdock.transfer</string>
+  </array>
+</dict>
+</plist>

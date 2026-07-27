@@ -1,0 +1,417 @@
+[
+  {
+    "file": "01_primary_logos/pocketdock_compact_stacked.png",
+    "bytes": 106359,
+    "sha256": "7957520379c7c2863ad01e8cf842b4970ed852fed1f2edd11c2161bf9d7486f4",
+    "width": 431,
+    "height": 313,
+    "mode": "RGBA",
+    "transparent": true
+  },
+  {
+    "file": "01_primary_logos/pocketdock_primary_horizontal.png",
+    "bytes": 209445,
+    "sha256": "e3f3c81bc1114816e04477f56f1d6ad0bd43f9e4763b8b93c7ff9871251da050",
+    "width": 1148,
+    "height": 353,
+    "mode": "RGBA",
+    "transparent": true
+  },
+  {
+    "file": "01_primary_logos/pocketdock_primary_stacked.png",
+    "bytes": 561193,
+    "sha256": "1967bca307035f39a8036958969ce53df93d8be734265314cce8acdb60a2eccb",
+    "width": 786,
+    "height": 684,
+    "mode": "RGBA",
+    "transparent": true
+  },
+  {
+    "file": "01_primary_logos/pocketdock_wordmark.png",
+    "bytes": 50620,
+    "sha256": "f21c364136b23625122bc810192d3e831aa287d2b6988a04ea9b5615d59dbb46",
+    "width": 617,
+    "height": 120,
+    "mode": "RGBA",
+    "transparent": true
+  },
+  {
+    "file": "02_brand_marks/pocketdock_badge_mark.png",
+    "bytes": 169075,
+    "sha256": "f609656e45618561016a2588eb9079d955b336ca6664e408ab9846d4549b2670",
+    "width": 427,
+    "height": 414,
+    "mode": "RGBA",
+    "transparent": true
+  },
+  {
+    "file": "02_brand_marks/pocketdock_framed_app_mark.png",
+    "bytes": 457924,
+    "sha256": "861d6d21abb62e24ce0d9957a1970c96e8bc3efdeeecac31fc3a6ea0fe39dc70",
+    "width": 742,
+    "height": 741,
+    "mode": "RGBA",
+    "transparent": true
+  },
+  {
+    "file": "02_brand_marks/pocketdock_unframed_symbol.png",
+    "bytes": 128296,
+    "sha256": "cd74c8c2c95a03bdce1057a6caec97214632d3568c37d4948209cab188de538e",
+    "width": 336,
+    "height": 312,
+    "mode": "RGBA",
+    "transparent": true
+  },
+  {
+    "file": "03_components/pocketdock_horizontal_icon.png",
+    "bytes": 126988,
+    "sha256": "0749bf5009bc5f6f4e7411e6d33f9bfa414f6c3eee8889c7eb6e8d20237e1f49",
+    "width": 375,
+    "height": 345,
+    "mode": "RGBA",
+    "transparent": true
+  },
+  {
+    "file": "03_components/pocketdock_horizontal_wordmark.png",
+    "bytes": 77512,
+    "sha256": "e96b57cee535363e9d2ca464523f02b43321ea8a1cee419b18b8d90d3dd056bd",
+    "width": 774,
+    "height": 134,
+    "mode": "RGBA",
+    "transparent": true
+  },
+  {
+    "file": "03_components/pocketdock_stacked_icon.png",
+    "bytes": 477429,
+    "sha256": "536404a33f10bcb25b8965f9c5816cfb010c044f9f431111b873c6ae8f722489",
+    "width": 659,
+    "height": 555,
+    "mode": "RGBA",
+    "transparent": true
+  },
+  {
+    "file": "03_components/pocketdock_stacked_wordmark.png",
+    "bytes": 78889,
+    "sha256": "150c4b3d2b9210c34b26f97eb76428f0da59466081aac68f78cade3d26ad71e9",
+    "width": 778,
+    "height": 140,
+    "mode": "RGBA",
+    "transparent": true
+  },
+  {
+    "file": "04_app_icon_sizes/framed/pocketdock_framed_1024x1024.png",
+    "bytes": 799900,
+    "sha256": "570ec7a29232591b88e2c24a2c1f4bccca4b667bf23224f202e0d12c282ad4f8",
+    "width": 1024,
+    "height": 1024,
+    "mode": "RGBA",
+    "transparent": true
+  },
+  {
+    "file": "04_app_icon_sizes/framed/pocketdock_framed_128x128.png",
+    "bytes": 19950,
+    "sha256": "3ec0723a219b98d347d34ab0a3e1703a996a24e7da4c03fa23cca1ecab79b902",
+    "width": 128,
+    "height": 128,
+    "mode": "RGBA",
+    "transparent": true
+  },
+  {
+    "file": "04_app_icon_sizes/framed/pocketdock_framed_144x144.png",
+    "bytes": 23861,
+    "sha256": "8d6ab28b37b42337cc7067e97185e08261a7544e201481a9fa34b4dbc48c4e27",
+    "width": 144,
+    "height": 144,
+    "mode": "RGBA",
+    "transparent": true
+  },
+  {
+    "file": "04_app_icon_sizes/framed/pocketdock_framed_16x16.png",
+    "bytes": 875,
+    "sha256": "a94f839236265ec73f4522e6c2006c6f6cdb6fc57364f4d05b4042853b119826",
+    "width": 16,
+    "height": 16,
+    "mode": "RGBA",
+    "transparent": true
+  },
+  {
+    "file": "04_app_icon_sizes/framed/pocketdock_framed_180x180.png",
+    "bytes": 34324,
+    "sha256": "dab11068e64fc08c1f4346b406186389921e79cf3fa0db5dcddb95577695daff",
+    "width": 180,
+    "height": 180,
+    "mode": "RGBA",
+    "transparent": true
+  },
+  {
+    "file": "04_app_icon_sizes/framed/pocketdock_framed_192x192.png",
+    "bytes": 38608,
+    "sha256": "39c097be21b4b43a42e909da0a4bb3f7f66c6d9201f4b835c087a62b6572cd8a",
+    "width": 192,
+    "height": 192,
+    "mode": "RGBA",
+    "transparent": true
+  },
+  {
+    "file": "04_app_icon_sizes/framed/pocketdock_framed_24x24.png",
+    "bytes": 1544,
+    "sha256": "8a022064fd3de4384db5078d24ef7e2178543772abab3310e63b7f64f7b0cc81",
+    "width": 24,
+    "height": 24,
+    "mode": "RGBA",
+    "transparent": true
+  },
+  {
+    "file": "04_app_icon_sizes/framed/pocketdock_framed_256x256.png",
+    "bytes": 64079,
+    "sha256": "385b77fc0fb85f0d765dd74b5ef6555343aa7c519e7bd135bf7cda2bc585d168",
+    "width": 256,
+    "height": 256,
+    "mode": "RGBA",
+    "transparent": true
+  },
+  {
+    "file": "04_app_icon_sizes/framed/pocketdock_framed_32x32.png",
+    "bytes": 2224,
+    "sha256": "00efbcf65edb9cb4c85a1e3fe553f34e0e398d3c62d59de5e3ebc7c705ded20d",
+    "width": 32,
+    "height": 32,
+    "mode": "RGBA",
+    "transparent": true
+  },
+  {
+    "file": "04_app_icon_sizes/framed/pocketdock_framed_384x384.png",
+    "bytes": 129683,
+    "sha256": "683913ea70ffe9782bef7cec6a8b5e9011de29acdd82362eb93eaf1ebb080714",
+    "width": 384,
+    "height": 384,
+    "mode": "RGBA",
+    "transparent": true
+  },
+  {
+    "file": "04_app_icon_sizes/framed/pocketdock_framed_48x48.png",
+    "bytes": 4387,
+    "sha256": "f403cdd0e62a05bdb8db55ee11336353544b945de35f5c9e0bc66c85f4dc288d",
+    "width": 48,
+    "height": 48,
+    "mode": "RGBA",
+    "transparent": true
+  },
+  {
+    "file": "04_app_icon_sizes/framed/pocketdock_framed_512x512.png",
+    "bytes": 226066,
+    "sha256": "b2ea9a3d4e1c89f74a1c5fe32398520f465c5d586063a56d53f2cf9efc881560",
+    "width": 512,
+    "height": 512,
+    "mode": "RGBA",
+    "transparent": true
+  },
+  {
+    "file": "04_app_icon_sizes/framed/pocketdock_framed_64x64.png",
+    "bytes": 6706,
+    "sha256": "4b247e0d99727c0bc9229f4b76427bcd9a6e4577dbfdc2ed9ac2094c10374eea",
+    "width": 64,
+    "height": 64,
+    "mode": "RGBA",
+    "transparent": true
+  },
+  {
+    "file": "04_app_icon_sizes/framed/pocketdock_framed_96x96.png",
+    "bytes": 12844,
+    "sha256": "4baa08e98a5a93df54626cb7f3888f02c4386760fd20d2a0a6a4e971db356ea7",
+    "width": 96,
+    "height": 96,
+    "mode": "RGBA",
+    "transparent": true
+  },
+  {
+    "file": "04_app_icon_sizes/pocketdock_favicon.ico",
+    "bytes": 116180,
+    "sha256": "1ad0fb12f47a945f71494247e58613063421a5f93fddb0c017904dc0fd93371a"
+  },
+  {
+    "file": "04_app_icon_sizes/unframed/pocketdock_unframed_1024x1024.png",
+    "bytes": 714777,
+    "sha256": "e1b65fd7180b5406dd50c1a7c6a1024da2795470c497a1fb7adf431fa0ca7c49",
+    "width": 1024,
+    "height": 1024,
+    "mode": "RGBA",
+    "transparent": true
+  },
+  {
+    "file": "04_app_icon_sizes/unframed/pocketdock_unframed_128x128.png",
+    "bytes": 21578,
+    "sha256": "22b8225db0e3bc96e41619e2d3973baabd6addd384d8d43e3d475690599cb8a0",
+    "width": 128,
+    "height": 128,
+    "mode": "RGBA",
+    "transparent": true
+  },
+  {
+    "file": "04_app_icon_sizes/unframed/pocketdock_unframed_144x144.png",
+    "bytes": 26650,
+    "sha256": "5362be283877b0734d27c36566bf41bbfbeac93c0beeb7cef1cc1839d0f0d5db",
+    "width": 144,
+    "height": 144,
+    "mode": "RGBA",
+    "transparent": true
+  },
+  {
+    "file": "04_app_icon_sizes/unframed/pocketdock_unframed_16x16.png",
+    "bytes": 842,
+    "sha256": "09ac34ef5136c30705c6cb0f6e49a120b7575f392f6cd078f76f8c62ff9743f0",
+    "width": 16,
+    "height": 16,
+    "mode": "RGBA",
+    "transparent": true
+  },
+  {
+    "file": "04_app_icon_sizes/unframed/pocketdock_unframed_180x180.png",
+    "bytes": 39499,
+    "sha256": "2a850530b56cfd99a7a112ea74420ec0963f2175c165778b3b9f10e73e38fb4f",
+    "width": 180,
+    "height": 180,
+    "mode": "RGBA",
+    "transparent": true
+  },
+  {
+    "file": "04_app_icon_sizes/unframed/pocketdock_unframed_192x192.png",
+    "bytes": 44511,
+    "sha256": "6aa4a202ad8a207ae0a32a6417857fd2b73b44f3ed868f9dac42308012307722",
+    "width": 192,
+    "height": 192,
+    "mode": "RGBA",
+    "transparent": true
+  },
+  {
+    "file": "04_app_icon_sizes/unframed/pocketdock_unframed_24x24.png",
+    "bytes": 1578,
+    "sha256": "4ca831e9b4e3982b39b1e564e535ce578e731263796a1889197171aead58f80b",
+    "width": 24,
+    "height": 24,
+    "mode": "RGBA",
+    "transparent": true
+  },
+  {
+    "file": "04_app_icon_sizes/unframed/pocketdock_unframed_256x256.png",
+    "bytes": 76279,
+    "sha256": "ff273a2f0e172ff0ea7145094cae74aa68950c3180fcc0eb734494ac82276fae",
+    "width": 256,
+    "height": 256,
+    "mode": "RGBA",
+    "transparent": true
+  },
+  {
+    "file": "04_app_icon_sizes/unframed/pocketdock_unframed_32x32.png",
+    "bytes": 2399,
+    "sha256": "12155cc30dcfb6bc284f1e48493cfb489d2f427c65abb6f7c919f1720270b841",
+    "width": 32,
+    "height": 32,
+    "mode": "RGBA",
+    "transparent": true
+  },
+  {
+    "file": "04_app_icon_sizes/unframed/pocketdock_unframed_384x384.png",
+    "bytes": 161785,
+    "sha256": "1714a697763e584ffbde8ecea2cf02e3929a8f52e28e29b54473474a5bb4af66",
+    "width": 384,
+    "height": 384,
+    "mode": "RGBA",
+    "transparent": true
+  },
+  {
+    "file": "04_app_icon_sizes/unframed/pocketdock_unframed_48x48.png",
+    "bytes": 4340,
+    "sha256": "a43ede007b21da3691415f2ad60c18b215a7d88a7fe7f3aa85f33c4953d6ee25",
+    "width": 48,
+    "height": 48,
+    "mode": "RGBA",
+    "transparent": true
+  },
+  {
+    "file": "04_app_icon_sizes/unframed/pocketdock_unframed_512x512.png",
+    "bytes": 259728,
+    "sha256": "8e83ec5e67e1afbc9a5fed054a62cbafc731a413e5c010f23eb9f6a0b897f213",
+    "width": 512,
+    "height": 512,
+    "mode": "RGBA",
+    "transparent": true
+  },
+  {
+    "file": "04_app_icon_sizes/unframed/pocketdock_unframed_64x64.png",
+    "bytes": 6763,
+    "sha256": "f76b36356465a596557786ecdf66a8fec742748f11125e6833f457ced58beeb0",
+    "width": 64,
+    "height": 64,
+    "mode": "RGBA",
+    "transparent": true
+  },
+  {
+    "file": "04_app_icon_sizes/unframed/pocketdock_unframed_96x96.png",
+    "bytes": 13331,
+    "sha256": "e6d968d4f2f8b71f4714ffb30808a76a1a67a1091649ef4b99cc035da0dc64b4",
+    "width": 96,
+    "height": 96,
+    "mode": "RGBA",
+    "transparent": true
+  },
+  {
+    "file": "05_source_canvases/PocketDock_logo_original_reference_opaque.png",
+    "bytes": 3307450,
+    "sha256": "6d088bc25a63b3aae930df23fb2d11f63e12431b430c06dbd16b2b1bd8e045b8",
+    "width": 2048,
+    "height": 1117,
+    "mode": "RGBA",
+    "transparent": false
+  },
+  {
+    "file": "05_source_canvases/generated_collection_sheet.png",
+    "bytes": 2254453,
+    "sha256": "9219e20c4f19183fd36a9628f6635cc98ad0487fc86a1f73d050eafd97f5a9c4",
+    "width": 1536,
+    "height": 1024,
+    "mode": "RGBA",
+    "transparent": true
+  },
+  {
+    "file": "05_source_canvases/generated_framed_icon_canvas.png",
+    "bytes": 2201519,
+    "sha256": "64357f5671c0dd6c51b7e86e05f8880fd860003dabda519df74a6e9fc582bceb",
+    "width": 1536,
+    "height": 1024,
+    "mode": "RGBA",
+    "transparent": true
+  },
+  {
+    "file": "05_source_canvases/generated_horizontal_canvas.png",
+    "bytes": 2141886,
+    "sha256": "6361fd3f40179b244b464dcc763fc8a5e9a43f687248a8c1e4fc4937684c04d9",
+    "width": 1536,
+    "height": 1024,
+    "mode": "RGBA",
+    "transparent": true
+  },
+  {
+    "file": "05_source_canvases/generated_stacked_canvas.png",
+    "bytes": 2226583,
+    "sha256": "04d5d0229b676de8c32484394598b53823b74b7250dd596869b878b4fb17a429",
+    "width": 1536,
+    "height": 1024,
+    "mode": "RGBA",
+    "transparent": true
+  },
+  {
+    "file": "06_preview/PocketDock_branding_pack_preview.png",
+    "bytes": 477658,
+    "sha256": "7cd882e33abfa53e5369d9f08b0fc342286f59f7f30973f6a288daaa3aaa73f4",
+    "width": 1040,
+    "height": 1440,
+    "mode": "RGB",
+    "transparent": false
+  },
+  {
+    "file": "README.txt",
+    "bytes": 1244,
+    "sha256": "850989db1f389c0721cc5d0c76523364f24b7a62cc2c94f86f34991e9c89c347"
+  }
+]

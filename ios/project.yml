@@ -1,0 +1,78 @@
+name: PocketDock
+options:
+  bundleIdPrefix: com.docdamage
+  deploymentTarget:
+    iOS: "17.0"
+settings:
+  base:
+    SWIFT_VERSION: "6.0"
+    DEVELOPMENT_TEAM: ""
+targets:
+  PocketDock:
+    type: application
+    platform: iOS
+    sources:
+      - PocketDock
+      - path: Shared
+    info:
+      path: PocketDock/Info.plist
+    entitlements:
+      path: PocketDock/PocketDock.entitlements
+    settings:
+      base:
+        PRODUCT_BUNDLE_IDENTIFIER: com.docdamage.pocketdock
+        PRODUCT_NAME: PocketDock
+        MARKETING_VERSION: 4.0.1
+        CURRENT_PROJECT_VERSION: 10
+    dependencies:
+      - sdk: AVFoundation.framework
+      - sdk: MediaPlayer.framework
+      - target: PocketDockShare
+      - target: PocketDockFileProvider
+      - target: PocketDockWidgets
+  PocketDockShare:
+    type: app-extension
+    platform: iOS
+    sources:
+      - PocketDockShare
+    info:
+      path: PocketDockShare/Info.plist
+    entitlements:
+      path: PocketDockShare/PocketDockShare.entitlements
+    settings:
+      base:
+        PRODUCT_BUNDLE_IDENTIFIER: com.docdamage.pocketdock.share
+        PRODUCT_NAME: PocketDock Share
+        SKIP_INSTALL: YES
+  PocketDockFileProvider:
+    type: app-extension
+    platform: iOS
+    sources:
+      - PocketDockFileProvider
+    info:
+      path: PocketDockFileProvider/Info.plist
+    entitlements:
+      path: PocketDockFileProvider/PocketDockFileProvider.entitlements
+    settings:
+      base:
+        PRODUCT_BUNDLE_IDENTIFIER: com.docdamage.pocketdock.fileprovider
+        PRODUCT_NAME: PocketDock Drive
+        SKIP_INSTALL: YES
+  PocketDockWidgets:
+    type: app-extension
+    platform: iOS
+    sources:
+      - PocketDockWidgets
+      - path: Shared/TransferActivityAttributes.swift
+      - path: Shared/PocketDockIntents.swift
+    info:
+      path: PocketDockWidgets/Info.plist
+    entitlements:
+      path: PocketDockWidgets/PocketDockWidgets.entitlements
+    settings:
+      base:
+        PRODUCT_BUNDLE_IDENTIFIER: com.docdamage.pocketdock.widgets
+        PRODUCT_NAME: PocketDock Widgets
+        MARKETING_VERSION: 4.0.1
+        CURRENT_PROJECT_VERSION: 10
+        SKIP_INSTALL: YES
