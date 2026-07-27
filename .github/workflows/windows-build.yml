@@ -1,0 +1,45 @@
+name: PocketDock Verify
+
+on:
+  workflow_dispatch:
+  push:
+    branches:
+      - main
+  pull_request:
+
+jobs:
+  verify:
+    runs-on: windows-latest
+    permissions:
+      contents: read
+
+    steps:
+      - name: Check out source
+        uses: actions/checkout@v4
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+
+      - name: Install exact dependencies
+        run: npm ci
+
+      - name: Verify PocketDock
+        run: npm run verify
+
+      - name: Verify native iOS source
+        run: npm run verify:ios
+
+      - name: Verify hardware integration readiness
+        run: npm run verify:hardware
+
+      - name: Verify private relay
+        run: npm run verify:relay
+
+      - name: Smoke-test private relay
+        run: npm --prefix relay test
+
+      - name: Audit build toolchain
+        run: npm run verify:build-tools
