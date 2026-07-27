@@ -1,5 +1,5 @@
 import path from "node:path";
-import { mkdtemp, rm, writeFile } from "node:fs/promises";
+import { mkdtemp, realpath, rm, writeFile } from "node:fs/promises";
 import os from "node:os";
 import { afterEach, describe, expect, it } from "vitest";
 import {
@@ -40,7 +40,11 @@ describe("file path safety", () => {
     await writeFile(original, "original");
 
     expect(await uniqueFilePath(original)).toBe(path.join(root, "Beat (2).wav"));
+    const canonicalRoot = await realpath(root);
     const resolved = await resolveDestinationPath(root, "Beat.wav", "", "rename");
-    expect(resolved).toEqual({ finalPath: path.join(root, "Beat (2).wav"), skipped: false });
+    expect(resolved).toEqual({
+      finalPath: path.join(canonicalRoot, "Beat (2).wav"),
+      skipped: false
+    });
   });
 });

@@ -1,6 +1,6 @@
 import path from "node:path";
 import os from "node:os";
-import { mkdir, mkdtemp, rm, symlink, writeFile } from "node:fs/promises";
+import { mkdir, mkdtemp, realpath, rm, symlink, writeFile } from "node:fs/promises";
 import { afterEach, describe, expect, it, vi } from "vitest";
 import {
   MusicLibraryService,
@@ -281,10 +281,11 @@ describe("MusicLibraryService", () => {
     );
 
     const items = await service.start();
+    const canonicalPaths = await Promise.all([realpath(firstPath), realpath(secondPath)]);
     expect(items).toHaveLength(2);
     expect(new Set(items.map((item) => item.id)).size).toBe(2);
     expect(new Set(items.map((item) => service.getFilePath(item.id)))).toEqual(
-      new Set([firstPath, secondPath])
+      new Set(canonicalPaths)
     );
     service.stop();
   });

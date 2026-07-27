@@ -1,7 +1,7 @@
 import http from "node:http";
 import os from "node:os";
 import path from "node:path";
-import { mkdtemp, mkdir, readFile, rm, writeFile } from "node:fs/promises";
+import { mkdtemp, mkdir, readFile, realpath, rm, writeFile } from "node:fs/promises";
 import { afterEach, describe, expect, it } from "vitest";
 import { StateStore } from "./store.js";
 import { TransferService } from "./transfer-service.js";
@@ -160,7 +160,7 @@ describe("TransferService integration", () => {
     );
     expect(completeResponse.status).toBe(200);
 
-    const savedPath = path.join(downloads, "Sessions", "unsafe_beat_.wav");
+    const savedPath = await realpath(path.join(downloads, "Sessions", "unsafe_beat_.wav"));
     expect(await readFile(savedPath, "utf8")).toBe(bytes.toString());
     expect(store.getHistory()[0]).toMatchObject({
       fileName: "unsafe_beat_.wav",
