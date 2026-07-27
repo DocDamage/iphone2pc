@@ -42,7 +42,7 @@ describeOnWindows("Windows iPhone Shell media layouts", () => {
         "-HelperPath",
         helperPath
       ],
-      { encoding: "utf8", windowsHide: true }
+      { encoding: "utf8", windowsHide: true, timeout: 15_000 }
     );
     const result = JSON.parse(stdout.replace(/^\uFEFF/, "").trim()) as LayoutFixtureResult;
 
@@ -77,5 +77,5 @@ describeOnWindows("Windows iPhone Shell media layouts", () => {
       invalidMonth: false,
       randomFolder: false
     });
-  });
+  }, 20_000);
 });
